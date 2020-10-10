@@ -1,8 +1,6 @@
 import requests as r, bs4, urllib.parse as u, telebot
 from time import sleep
 
-#Uncode is u.unquote(url)
-
 def HTMLParser(url):
     # print(url)
     url = r.get(url)
@@ -24,23 +22,23 @@ def VideoUrl(url):
         elif 'm.' in url:
             pass
         else:
-            return 'Revisa tu link todo culero'
+            return 'Your link doesn\'t work'
         return HTMLParser(url)
-    except IndexError:
-        return 'Tu mamada no sirve'
+    except:
+        return 'An error has occured, please contact the bot creator.'
 
 if __name__ == "__main__":
 
 
-    bot_token = '1131786920:AAE9-LP7rFGkFXR2iXlAhUv1QwAuIIalB78'
+    bot_token = '<BOT_TOKEN>'
     bot = telebot.TeleBot(token=bot_token)
 
 
     @bot.message_handler(commands=['start'])
     def send_welcome(message):
-        bot.reply_to(message, 'ola gei')
+        bot.reply_to(message, 'TEST MESSAGE')
 
-    @bot.message_handler(func=lambda msg: msg.text is not None and '@Mmaguebot' in msg.text)
+    @bot.message_handler(func=lambda msg: msg.text is not None and '@BotName' in msg.text)
     def at_answer(message):
         fburl = message.text.split()[1]
         if 'http' not in fburl:
