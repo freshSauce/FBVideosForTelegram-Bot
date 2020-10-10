@@ -18,7 +18,7 @@ Also make sure to change <**@BotName**> with your bot's @
 ```python
 bot.message_handler(func=lambda msg: msg.text is not None and '@BotName' in msg.text)
 ```
-Once you've done those changes, go to your Telegram Chat and add your bot. To use the bot just Mention him and type your video url.
+Once you've done those changes, go to your Telegram Chat and add your bot (verify if your bot's privacy is enabled, if so, disable it or give your bot Administrator perms). To use the bot just Mention him and type your video url.
 
 Example:
 
