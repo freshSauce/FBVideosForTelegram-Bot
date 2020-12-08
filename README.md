@@ -1,5 +1,5 @@
 # FB Videos For Telegram (BOT)
-With this bot you can make your telegram chat even better, make sure yo have your own API_TOKEN! This BOT works **ONLY** with Mentions (at the moment).
+With this bot you can make your telegram chat even better, make sure you have your own API_TOKEN! This BOT works **ONLY** with Mentions (at the moment).
 
 ## Installing the required modules
 
