@@ -43,7 +43,9 @@ if __name__ == "__main__":
         fburl = message.text.split()[1]
         if 'http' not in fburl:
             fburl ='http://'+fburl
-        bot.reply_to(message, VideoUrl(fburl))
+        bot.reply_to(message, VideoUrl(fburl)) #comment this line to send the video instead of link.
+        #If you want to send the just the video without link use this:
+        #bot.send_video(message.chat.id, VideoUrl(fburl), supports_streaming=True, reply_to_message_id=message.message_id)
 
     while True:
         try:
